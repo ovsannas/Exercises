@@ -60,18 +60,28 @@ Complex<E> Complex<E>::multiply(Complex<E> & C)
 
 int main()
 {
-    std::complex<double> c1(-5.34,19.02);
-    std::complex<double> c2(4.24,-2.87);
+    std::complex<double> c1(-5.09, 19.78);
+    std::complex<double> c2(4.02, -2.25);
 
-    Complex<double> C1(-5.34,19.02);
-    Complex<double> C2(4.24,-2.87);
-    std::complex<double> c4(0.0,0.0);
+    Complex<double> C1(-5.09, 19.78);
+    Complex<double> C2(4.02, -2.25);
+    std::complex<double> c4(0.0, 0.0);
+    std::complex<double> c5(0.0, 0.0);
+    std::complex<double> c6(0.0, 0.0);
 
-    Complex<double> C3 = C1.multiply(C2);
-    c4 = c1 * c2; 
+    Complex<double> C3 = C1.add(C2);
+    Complex<double> C4 = C1.sub(C2);
+    Complex<double> C5 = C1.multiply(C2);
+    c4 = c1 + c2;
+    c5 = c1 - c2;
+    c6 = c1 * c2; 
 
     C3.print();
+    C4.print();
+    C5.print();
     std::cout << c4 << std::endl;
+    std::cout << c5 << std::endl;
+    std::cout << c6 << std::endl;
 
     std::cout << C1.module() << std::endl;
     std::cout << C1.norm() << std::endl;
