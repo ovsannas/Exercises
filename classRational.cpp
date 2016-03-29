@@ -44,28 +44,30 @@ void Rational::print2()
 
 int main()
 {
-    Rational R1(27,18);
-    Rational R2(3,6);
-    Rational R3 = R1.add(R2);
+    Rational R1(18,45);
+    R1.print1();
+    R1.print2();
+    Rational R2(24,64);
+    R2.print1();
+    R2.print2();
 
+    Rational R3 = R1.add(R2);
     R3.print1();
     R3.print2();
-    R1.print2();
+
+    return 0;
 }
 
 
 int NOD (int x, int y)
 {
-    int max = std::max(x,y);
-    int j = 1;
-
-    for(int i = 2; i <= max/2; i++)
+    while (x != 0 && y != 0)
     {
-        if (x % i == 0 && y % i == 0){
-            j = i;
-        }
-
+        if (x > y)
+            x = x % y;
+        else
+            y = y % x;
     }
 
-    return j;
+    return x + y;
 }
