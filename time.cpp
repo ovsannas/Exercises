@@ -2,18 +2,26 @@
 #include "time.h"
 
 Time::Time(int hr, int mi, int se)
-{ setTime(hr, mi, se); }
+{
+    setTime(hr, mi, se);
+}
 
 void Time::setHour (int h)
-{ hour = h; }
+{
+    hour = h;
+}
 
 void Time::setMinute (int m)
-{ min = m; }
+{ 
+    min = m; 
+}
 
 void Time::setSecond (int s)
-{ sec = s; }
+{ 
+    sec = s;
+}
 
-void setTime (int h, int m, int s)
+void Time::setTime (int h, int m, int s)
 {
     setHour(h);
     setMinute(m);
@@ -21,10 +29,16 @@ void setTime (int h, int m, int s)
 }
 
 int Time::getHour()
-{ return hour; }
+{ 
+    return hour; 
+}
 
 int Time::getMinute()
-{ return min; }
+{
+    return min;
+}
 
 int Time::getSecond()
-{ return sec; }
+{
+    return sec;
+}
