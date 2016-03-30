@@ -7,11 +7,11 @@ class Time {
         void setSecond (int);
         void setTime (int, int, int);
 
-        int getHour ();
-        int getMinute ();
-        int getSecond ();
+        int getHour ()const;
+        int getMinute ()const;
+        int getSecond ()const;
 
-        void printStandard();
+        void printStandard()const;
 
     private:
         int hour;
