@@ -3,9 +3,8 @@
 
 int main()
 {
-    Time wakeUp(7,15,0);
-    wakeUp.setHour(6);
-    std::cout << wakeUp.getHour() << std::endl;
+    const Time wakeUp(7,15,0);
+    wakeUp.printStandard();
 
     Time morn(9,5,25);
     morn.printStandard();
