@@ -9,6 +9,10 @@ IntegerSet::IntegerSet()
 
 IntegerSet::IntegerSet(int a, int b, int c, int d, int e)
 {
+    for(int i = 0; i < 100; i++){
+        intSet[i] = 0;
+    }
+
     if(a == -1)
         intSet[a] = false;
     else
@@ -89,9 +93,13 @@ void IntegerSet::Intersection(IntegerSet & S, IntegerSet & intersecSet)
 
 bool IntegerSet::IsEqualTo(IntegerSet & S)
 {
-    int i;
-    for(i = 0; i < 100; i++)
-        return containElement(i) && S.containElement(i);
+    for(int i = 0; i < 100; i++)
+    {
+        if(containElement(i) != S.containElement(i))
+            return false;
+    }
+
+    return true;
 }
 
 
