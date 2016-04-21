@@ -1,14 +1,15 @@
-class IntegerSet {
+class IntegerSet{
     public:
         IntegerSet();
-        IntegerSet(int, int, int, int, int);
+        IntegerSet(int,int,int,int,int);
         void insertElement(int);
         void deleteElement(int);
         bool containElement(int);
         void Union(IntegerSet &, IntegerSet &);
         void Intersection(IntegerSet &, IntegerSet &);
-        bool isEqualTo(IntegerSet &);
+        bool IsEqualTo(IntegerSet &);
         void Print();
     private:
-        bool arraySet[101];
+        bool intSet[100];
 };
+
