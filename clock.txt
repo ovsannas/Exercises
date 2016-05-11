@@ -1,0 +1,51 @@
+reset
+
+canvassize 400,400
+$cx = 200
+$cy = 200
+$r = 180
+
+learn ClockFace
+{
+
+for $i = 180 to -180 step -6 {
+  $x = $cx + $r * sin ($i)
+  $y = $cy + $r * cos ($i)
+  pw 2
+
+  # Setting the bold points
+  # and printing the numbers
+  if ($i/30) == round($i/30) {
+    # Setting bold point size
+    pw 4
+    
+  }
+
+  # Setting the point
+  go $x, $y
+  forward 0
+}
+}
+
+learn DrawArrows
+{
+  go $cx, $cy
+  pw 6
+  forward $r - 20
+  pw 10
+  go $cx, $cy
+  tr 60
+  forward $r - 70
+  go $cx, $cy
+  tr 72
+  pw 2
+  backward 40
+  forward $r + 50
+  go $cx, $cy
+  pc 255, 255, 255
+  fw 0
+}
+
+ClockFace
+DrawArrows
+sh
