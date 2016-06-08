@@ -14,7 +14,6 @@ for $i = 180 to -180 step -6 {
   pw 2
 
   # Setting the bold points
-  # and printing the numbers
   if ($i/30) == round($i/30) {
     # Setting bold point size
     pw 4
